@@ -1,54 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-11-01T19:08:34 GMT+07:00" name="Default suite" finished-at="2026-11-01T19:14:31 GMT+07:00" duration-ms="357303">
+  <suite started-at="2026-11-01T20:36:13 GMT+07:00" name="Default suite" finished-at="2026-11-01T20:42:48 GMT+07:00" duration-ms="394811">
     <groups>
     </groups>
-    <test started-at="2026-11-01T19:08:34 GMT+07:00" name="Default test" finished-at="2026-11-01T19:14:31 GMT+07:00" duration-ms="357303">
-      <class name="vn.team.autotest.modules.responsive.scenario.LearnScenario9">
-        <test-method signature="LEARN_09_FLOW(java.lang.String,int,int)[pri:0, instance:vn.team.autotest.modules.responsive.scenario.LearnScenario9@4c309d4d]" started-at="2026-11-01T19:08:34 GMT+07:00" name="LEARN_09_FLOW" description="KB-09-001..019: login một lần / viewport" data-provider="mobileFlash" finished-at="2026-11-01T19:13:28 GMT+07:00" duration-ms="293712" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[iPhone XR 414x896]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[414]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[896]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[iPhone XR 414x896 có 5/19 TC FAIL; xem PWW_AUTO_09_RWD.xlsx]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: iPhone XR 414x896 có 5/19 TC FAIL; xem PWW_AUTO_09_RWD.xlsx
-at vn.team.autotest.modules.responsive.scenario.LearnScenario9.LEARN_09_FLOW(LearnScenario9.java:145)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
-at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
-at java.base/java.lang.Thread.run(Thread.java:1474)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LEARN_09_FLOW -->
-        <test-method signature="LEARN_09_FLOW(java.lang.String,int,int)[pri:0, instance:vn.team.autotest.modules.responsive.scenario.LearnScenario9@4c309d4d]" started-at="2026-11-01T19:08:34 GMT+07:00" name="LEARN_09_FLOW" description="KB-09-001..019: login một lần / viewport" data-provider="mobileFlash" finished-at="2026-11-01T19:14:30 GMT+07:00" duration-ms="355402" status="FAIL">
+    <test started-at="2026-11-01T20:36:13 GMT+07:00" name="Default test" finished-at="2026-11-01T20:42:48 GMT+07:00" duration-ms="394811">
+      <class name="vn.team.autotest.modules.responsive.scenario.FlashCardScenario10">
+        <test-method signature="FLASHCARD_10_FLOW(java.lang.String,int,int)[pri:0, instance:vn.team.autotest.modules.responsive.scenario.FlashCardScenario10@4c309d4d]" started-at="2026-11-01T20:36:13 GMT+07:00" name="FLASHCARD_10_FLOW" data-provider="flashMobile" finished-at="2026-11-01T20:40:00 GMT+07:00" duration-ms="226676" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -66,34 +25,35 @@ at java.base/java.lang.Thread.run(Thread.java:1474)
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Android 393x873 có 5/19 TC FAIL; xem PWW_AUTO_09_RWD.xlsx]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Android 393x873 có 5/19 TC FAIL; xem PWW_AUTO_09_RWD.xlsx
-at vn.team.autotest.modules.responsive.scenario.LearnScenario9.LEARN_09_FLOW(LearnScenario9.java:145)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
-at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
-at java.base/java.lang.Thread.run(Thread.java:1474)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LEARN_09_FLOW -->
-        <test-method is-config="true" signature="exportExcel()[pri:0, instance:vn.team.autotest.modules.responsive.scenario.LearnScenario9@4c309d4d]" started-at="2026-11-01T19:14:30 GMT+07:00" name="exportExcel" finished-at="2026-11-01T19:14:31 GMT+07:00" duration-ms="1788" status="PASS">
+        </test-method> <!-- FLASHCARD_10_FLOW -->
+        <test-method signature="FLASHCARD_10_FLOW(java.lang.String,int,int)[pri:0, instance:vn.team.autotest.modules.responsive.scenario.FlashCardScenario10@4c309d4d]" started-at="2026-11-01T20:36:13 GMT+07:00" name="FLASHCARD_10_FLOW" data-provider="flashMobile" finished-at="2026-11-01T20:42:46 GMT+07:00" duration-ms="392736" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[iPhone XR 414x896]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[414]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[896]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FLASHCARD_10_FLOW -->
+        <test-method is-config="true" signature="exportExcel()[pri:0, instance:vn.team.autotest.modules.responsive.scenario.FlashCardScenario10@4c309d4d]" started-at="2026-11-01T20:42:46 GMT+07:00" name="exportExcel" finished-at="2026-11-01T20:42:48 GMT+07:00" duration-ms="1952" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- exportExcel -->
-      </class> <!-- vn.team.autotest.modules.responsive.scenario.LearnScenario9 -->
+      </class> <!-- vn.team.autotest.modules.responsive.scenario.FlashCardScenario10 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

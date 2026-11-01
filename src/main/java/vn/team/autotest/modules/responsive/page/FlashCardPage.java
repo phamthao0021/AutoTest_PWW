@@ -349,6 +349,10 @@ public class FlashCardPage {
     }
 
     private void confirmExitAndReturn(String source) {
+        // Riêng mũi tên trong Match dẫn về trang CHỌN CHỦ ĐỀ CHO MATCH,
+        // khác với Sidebar Học tập (dẫn về learn.php).
+        final boolean matchArrow = source.equals("Back Arrow")
+            && driver.getCurrentUrl().contains("match.php");
         final boolean[] confirmed = {false};
         WebDriverWait confirmWait = new WebDriverWait(driver, Duration.ofSeconds(12));
         confirmWait.pollingEvery(Duration.ofMillis(200));
@@ -383,10 +387,14 @@ public class FlashCardPage {
         }
         if (!confirmed[0]) throw new AssertionError("Chưa xác nhận thoát: " + source);
         try {
-            wait.until(d -> inLearn());
+            wait.until(d -> matchArrow
+                ? (d.getCurrentUrl().contains("select_topic.php")
+                    && d.getCurrentUrl().contains("type=match"))
+                : inLearn());
         } catch (TimeoutException ex) {
-            throw new AssertionError("Đã xác nhận thoát nhưng chưa về learn.php: "
-                + driver.getCurrentUrl(), ex);
+            throw new AssertionError("Đã xác nhận thoát nhưng chưa đến đúng trang đích "
+                + (matchArrow ? "select_topic.php?type=match" : "learn.php")
+                + "; URL=" + driver.getCurrentUrl(), ex);
         }
         System.out.println("[RWD09 EXIT PASS] " + source + " -> " + driver.getCurrentUrl());
     }
@@ -489,48 +497,58 @@ public class FlashCardPage {
         wait.until(d -> hasText("Question 1 / ") || hasText("Question 1/") || hasText("QUIZ · TEST"));
     }
 
+    /**
+     * KB-09-019: kết thúc Match theo điều khiển hiển thị trên trang thật.
+     * Không trực tiếp thay đổi trạng thái bài làm bằng JavaScript và không ép PASS.
+     */
+    public String finishMatchAndReadResult() {
+        // KB-09-019 must reach the real Match result screen. The Start state
+        // "Đã ghép 0 / ..." is not equivalent to completed exercise.
+        String[] labels = {"Hoàn thành bài tập", "Kết thúc bài tập",
+            "Kết thúc bài học", "Nộp bài", "Xem kết quả", "Hoàn thành"};
+        WebElement finish = null;
+        for (String candidate : labels) {
+            for (WebElement e : driver.findElements(By.xpath(
+                "//button[normalize-space(.)='" + candidate + "'] | "
+                + "//a[normalize-space(.)='" + candidate + "'] | "
+                + "//*[@role='button' and normalize-space(.)='" + candidate + "']"))) {
+                if (shown(e) && e.isEnabled()) { finish=e; break; }
+            }
+            if (finish != null) break;
+        }
+        if (finish == null) {
+            String state = norm(body());
+            throw new AssertionError(
+                "KB-09-019: Bài Match chưa có nút hoàn thành ở trạng thái hiện tại. "
+                + "Phải ghép các cặp thực tế để đạt điều kiện kết thúc hoặc "
+                + "xác định đúng nút kết thúc đang hiển thị. "
+                + "Không được coi trạng thái 'Đã ghép 0' là hoàn thành. "
+                + "URL=" + driver.getCurrentUrl()
+                + "; Buttons=" + exitButtonsDiagnostics()
+                + "; Body=" + state.substring(0, Math.min(800,state.length())));
+        }
+        String selected = norm(finish.getText());
+        highlight(finish, "Match -> " + selected);
+        finish.click();
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(12)).until(d -> {
+                String text = body();
+                return text.contains("CÂU ĐÚNG") && text.contains("CÂU SAI")
+                    || text.contains("Hoàn thành bài") && text.contains("Làm bài tập mới");
+            });
+        } catch (TimeoutException ex) {
+            String state = norm(body());
+            throw new AssertionError(
+                "KB-09-019: Đã nhấn '"+selected+"' nhưng chưa có Summary Match. "
+                + "URL="+driver.getCurrentUrl()
+                + "; Body="+state.substring(0,Math.min(800,state.length())),ex);
+        }
+        return body();
+    }
+
     public void startMatch() {
         wait.until(d -> hasText("Bài Tập Ghép Từ Vựng"));
         clickText("Bắt đầu làm bài tập");
         wait.until(d -> hasText("Đã ghép 0 /") || hasText("Đã ghép 0/") || hasText("BÀI TẬP GHÉP CẶP"));
     }
-
-public String finishMatchAndReadResult() {
-    String[] labels = {
-        "Hoàn thành bài tập",
-        "Kết thúc bài tập",
-        "Kết thúc bài học"
-    };
-
-    WebDriverWait shortWait = new WebDriverWait(
-        driver, Duration.ofSeconds(6)
-    );
-
-    WebElement button = shortWait.until(d -> {
-        for (String label : labels) {
-            for (WebElement e : d.findElements(
-                By.xpath(
-                    "//button[normalize-space(.)='" + label + "']"
-                    + " | //a[normalize-space(.)='" + label + "']"
-                )
-            )) {
-                if (e.isDisplayed() && e.isEnabled()) {
-                    return e;
-                }
-            }
-        }
-        return null;
-    });
-
-    button.click();
-
-    wait.until(d -> {
-        String text = d.findElement(By.tagName("body")).getText();
-        return text.contains("CÂU ĐÚNG")
-            && text.contains("CÂU SAI");
-    });
-
-    return driver.findElement(By.tagName("body")).getText();
-}
-
 }

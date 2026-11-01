@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="vn.team.autotest.modules.responsive.scenario.LearnScenario9">
+      <class name="vn.team.autotest.modules.responsive.scenario.FlashCardScenario10">
         <methods>
+          <include name="FLASHCARD_10_FLOW" invocation-numbers="0 1"/>
           <include name="exportExcel"/>
-          <include name="LEARN_09_FLOW" invocation-numbers="0 1"/>
         </methods>
-      </class> <!-- vn.team.autotest.modules.responsive.scenario.LearnScenario9 -->
+      </class> <!-- vn.team.autotest.modules.responsive.scenario.FlashCardScenario10 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

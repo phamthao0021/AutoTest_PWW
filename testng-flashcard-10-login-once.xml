@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="PWW_AUTO_10_RWD Flashcard" parallel="none" verbose="1" data-provider-thread-count="2">
+  <test name="Flashcard 10 Android iPhone XR">
+    <classes><class name="vn.team.autotest.modules.responsive.scenario.FlashCardScenario10">
+      <methods><include name="FLASHCARD_10_FLOW"/></methods>
+    </class></classes>
+  </test>
+</suite>
