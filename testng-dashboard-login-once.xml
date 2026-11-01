@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="PWW_DASHBOARD_06_RWD" parallel="none" data-provider-thread-count="2" verbose="1">
+    <test name="DashboardScenario - Android and iPhone XR">
+        <classes>
+            <class name="vn.team.autotest.modules.responsive.scenario.DashboardScenario">
+            <methods><include name="DASHBOARD_06_FLOW"/></methods>
+            </class>
+        </classes>
+    </test>
+</suite>

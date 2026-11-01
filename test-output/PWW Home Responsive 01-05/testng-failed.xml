@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [PWW Home Responsive 01-05]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Home RWD Android and iPhone XR(failed)">
+    <classes>
+      <class name="vn.team.autotest.modules.responsive.scenario.HomeScenario">
+        <methods>
+          <include name="PWW_AUTO_04_RWD" invocation-numbers="0"/>
+          <include name="PWW_AUTO_05_RWD" invocation-numbers="0"/>
+          <include name="exportExcel"/>
+          <include name="PWW_AUTO_03_RWD" invocation-numbers="0 1"/>
+          <include name="PWW_AUTO_01_RWD" invocation-numbers="0 1"/>
+        </methods>
+      </class> <!-- vn.team.autotest.modules.responsive.scenario.HomeScenario -->
+    </classes>
+  </test> <!-- Home RWD Android and iPhone XR(failed) -->
+</suite> <!-- Failed suite [PWW Home Responsive 01-05] -->

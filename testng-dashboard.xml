@@ -1,0 +1,13 @@
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="PWW Dashboard Responsive 06"
+       verbose="1"
+       parallel="none">
+
+    <test name="Dashboard User and SuperAdmin">
+        <classes>
+            <class name="vn.team.autotest.modules.responsive.scenario.DashboardScenario"/>
+        </classes>
+    </test>
+
+</suite>

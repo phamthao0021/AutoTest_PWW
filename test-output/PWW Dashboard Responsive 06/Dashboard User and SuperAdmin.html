@@ -1,0 +1,962 @@
+<html>
+<head>
+<title>TestNG:  Dashboard User and SuperAdmin</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Dashboard User and SuperAdmin</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>8/4/12</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Nov 01 14:07:31 GMT+07:00 2026</td>
+</tr>
+<tr><td>Total time:</td><td>162 seconds (162994 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC02_SidebarToggle()'><b>TC02_SidebarToggle</b><br>Test class: vn.team.autotest.modules.responsive.scenario.DashboardScenario<br>Parameters: USER, iPhone XR 414x896, 414, 896</td>
+<td><div><pre>java.lang.AssertionError: PWW_AUTO_06_RWD_TC02_USER iPhone XR 414x896 FAIL: ElementClickInterceptedException: element click intercepted: Element &lt;button id=&quot;mobile-menu-btn&quot; class=&quot;mobile-hamburger-btn&quot; aria-label=&quot;Mở menu&quot; data-old-outline=&quot;&quot; style=&quot;outline: rgb(220, 38, 38) solid 3px;&quot; data-rwd-mark=&quot;Đóng/mở Sidebar&quot;&gt;...&lt;/button&gt; is not clickable at point (28, 30). Other element would receive the click: &lt;svg viewBox=&quot;0 0 24 24&quot; width=&quot;16&quot; height=&quot;16&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;...&lt;/svg&gt;
+  (Session info: chrome=156.0.8078.79)
+Build info: version: &apos;4.31.0&apos;, revision: &apos;1ef9f18787*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.5&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ad3e60c5b6d2467d7a3c2d5a7874e5d6, clickElement {id=f.E1C06EA362D5ECC6E278B5A62BDA2425.d.4DA12D4D5C8870BDF2E58DFE6BAA3C5C.e.47}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 156.0.8078.79, chrome: {chromedriverVersion: 156.0.8078.80 (fb096c0011f9..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56622}, goog:processID: 208, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56622/devtoo..., se:cdpVersion: 156.0.8078.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (ad3e60c5b6d2467d7a3c2d5a7874e5d6)] -&gt; css selector: button[aria-controls*=&apos;sidebar&apos;],button[aria-label*=&apos;enu&apos;],button[aria-label*=&apos;idebar&apos;],#sidebarToggle,.sidebar-toggle,.menu-toggle,.hamburger]
+Session ID: ad3e60c5b6d2467d7a3c2d5a7874e5d6
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:171)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC02_SidebarToggle(DashboardScenario.java:62)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+Caused by: org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button id=&quot;mobile-menu-btn&quot; class=&quot;mobile-hamburger-btn&quot; aria-label=&quot;Mở menu&quot; data-old-outline=&quot;&quot; style=&quot;outline: rgb(220, 38, 38) solid 3px;&quot; data-rwd-mark=&quot;Đóng/mở Sidebar&quot;&gt;...&lt;/button&gt; is not clickable at point (28, 30). Other element would receive the click: &lt;svg viewBox=&quot;0 0 24 24&quot; width=&quot;16&quot; height=&quot;16&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;...&lt;/svg&gt;
+  (Session info: chrome=156.0.8078.79)
+Build info: version: &apos;4.31.0&apos;, revision: &apos;1ef9f18787*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.5&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ad3e60c5b6d2467d7a3c2d5a7874e5d6, clickElement {id=f.E1C06EA362D5ECC6E278B5A62BDA2425.d.4DA12D4D5C8870BDF2E58DFE6BAA3C5C.e.47}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 156.0.8078.79, chrome: {chromedriverVersion: 156.0.8078.80 (fb096c0011f9..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56622}, goog:processID: 208, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56622/devtoo..., se:cdpVersion: 156.0.8078.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (ad3e60c5b6d2467d7a3c2d5a7874e5d6)] -&gt; css selector: button[aria-controls*=&apos;sidebar&apos;],button[aria-label*=&apos;enu&apos;],button[aria-label*=&apos;idebar&apos;],#sidebarToggle,.sidebar-toggle,.menu-toggle,.hamburger]
+Session ID: ad3e60c5b6d2467d7a3c2d5a7874e5d6
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at vn.team.autotest.modules.responsive.page.DashboardPage.click(DashboardPage.java:40)
+	at vn.team.autotest.modules.responsive.page.DashboardPage.tapSidebarToggle(DashboardPage.java:105)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.lambda$1(DashboardScenario.java:68)
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:81)
+	... 27 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1001958076", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1001958076'><pre>java.lang.AssertionError: PWW_AUTO_06_RWD_TC02_USER iPhone XR 414x896 FAIL: ElementClickInterceptedException: element click intercepted: Element &lt;button id=&quot;mobile-menu-btn&quot; class=&quot;mobile-hamburger-btn&quot; aria-label=&quot;Mở menu&quot; data-old-outline=&quot;&quot; style=&quot;outline: rgb(220, 38, 38) solid 3px;&quot; data-rwd-mark=&quot;Đóng/mở Sidebar&quot;&gt;...&lt;/button&gt; is not clickable at point (28, 30). Other element would receive the click: &lt;svg viewBox=&quot;0 0 24 24&quot; width=&quot;16&quot; height=&quot;16&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;...&lt;/svg&gt;
+  (Session info: chrome=156.0.8078.79)
+Build info: version: &apos;4.31.0&apos;, revision: &apos;1ef9f18787*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.5&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ad3e60c5b6d2467d7a3c2d5a7874e5d6, clickElement {id=f.E1C06EA362D5ECC6E278B5A62BDA2425.d.4DA12D4D5C8870BDF2E58DFE6BAA3C5C.e.47}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 156.0.8078.79, chrome: {chromedriverVersion: 156.0.8078.80 (fb096c0011f9..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56622}, goog:processID: 208, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56622/devtoo..., se:cdpVersion: 156.0.8078.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (ad3e60c5b6d2467d7a3c2d5a7874e5d6)] -&gt; css selector: button[aria-controls*=&apos;sidebar&apos;],button[aria-label*=&apos;enu&apos;],button[aria-label*=&apos;idebar&apos;],#sidebarToggle,.sidebar-toggle,.menu-toggle,.hamburger]
+Session ID: ad3e60c5b6d2467d7a3c2d5a7874e5d6
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:171)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC02_SidebarToggle(DashboardScenario.java:62)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button id=&quot;mobile-menu-btn&quot; class=&quot;mobile-hamburger-btn&quot; aria-label=&quot;Mở menu&quot; data-old-outline=&quot;&quot; style=&quot;outline: rgb(220, 38, 38) solid 3px;&quot; data-rwd-mark=&quot;Đóng/mở Sidebar&quot;&gt;...&lt;/button&gt; is not clickable at point (28, 30). Other element would receive the click: &lt;svg viewBox=&quot;0 0 24 24&quot; width=&quot;16&quot; height=&quot;16&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;...&lt;/svg&gt;
+  (Session info: chrome=156.0.8078.79)
+Build info: version: &apos;4.31.0&apos;, revision: &apos;1ef9f18787*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.5&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ad3e60c5b6d2467d7a3c2d5a7874e5d6, clickElement {id=f.E1C06EA362D5ECC6E278B5A62BDA2425.d.4DA12D4D5C8870BDF2E58DFE6BAA3C5C.e.47}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 156.0.8078.79, chrome: {chromedriverVersion: 156.0.8078.80 (fb096c0011f9..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56622}, goog:processID: 208, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56622/devtoo..., se:cdpVersion: 156.0.8078.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (ad3e60c5b6d2467d7a3c2d5a7874e5d6)] -&gt; css selector: button[aria-controls*=&apos;sidebar&apos;],button[aria-label*=&apos;enu&apos;],button[aria-label*=&apos;idebar&apos;],#sidebarToggle,.sidebar-toggle,.menu-toggle,.hamburger]
+Session ID: ad3e60c5b6d2467d7a3c2d5a7874e5d6
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at vn.team.autotest.modules.responsive.page.DashboardPage.click(DashboardPage.java:40)
+	at vn.team.autotest.modules.responsive.page.DashboardPage.tapSidebarToggle(DashboardPage.java:105)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.lambda$1(DashboardScenario.java:68)
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:81)
+	... 27 more
+</pre></div></td>
+<td>13</td>
+<td>vn.team.autotest.modules.responsive.scenario.DashboardScenario@ed7f8b4</td></tr>
+<tr>
+<td title='vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC03_KpiIndependentExpected()'><b>TC03_KpiIndependentExpected</b><br>Test class: vn.team.autotest.modules.responsive.scenario.DashboardScenario<br>Parameters: USER, Android 393x873, 393, 873</td>
+<td><div><pre>java.lang.AssertionError: PWW_AUTO_06_RWD_TC03_USER Android 393x873 FAIL: AssertionError: Không tìm thấy KPI card (hãy đối chiếu selector DOM) expected [false] but found [true]
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:171)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC03_KpiIndependentExpected(DashboardScenario.java:76)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+Caused by: java.lang.AssertionError: Không tìm thấy KPI card (hãy đối chiếu selector DOM) expected [false] but found [true]
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.lambda$2(DashboardScenario.java:79)
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:81)
+	... 27 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1939970407", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1939970407'><pre>java.lang.AssertionError: PWW_AUTO_06_RWD_TC03_USER Android 393x873 FAIL: AssertionError: Không tìm thấy KPI card (hãy đối chiếu selector DOM) expected [false] but found [true]
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:171)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC03_KpiIndependentExpected(DashboardScenario.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: java.lang.AssertionError: Không tìm thấy KPI card (hãy đối chiếu selector DOM) expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertFalse(Assert.java:79)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.lambda$2(DashboardScenario.java:79)
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:81)
+	... 27 more
+</pre></div></td>
+<td>7</td>
+<td>vn.team.autotest.modules.responsive.scenario.DashboardScenario@ed7f8b4</td></tr>
+<tr>
+<td title='vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC02_SidebarToggle()'><b>TC02_SidebarToggle</b><br>Test class: vn.team.autotest.modules.responsive.scenario.DashboardScenario<br>Parameters: USER, Android 393x873, 393, 873</td>
+<td><div><pre>java.lang.AssertionError: PWW_AUTO_06_RWD_TC02_USER Android 393x873 FAIL: ElementClickInterceptedException: element click intercepted: Element &lt;button id=&quot;mobile-menu-btn&quot; class=&quot;mobile-hamburger-btn&quot; aria-label=&quot;Mở menu&quot; data-old-outline=&quot;&quot; style=&quot;outline: rgb(220, 38, 38) solid 3px;&quot; data-rwd-mark=&quot;Đóng/mở Sidebar&quot;&gt;...&lt;/button&gt; is not clickable at point (28, 30). Other element would receive the click: &lt;svg viewBox=&quot;0 0 24 24&quot; width=&quot;16&quot; height=&quot;16&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;...&lt;/svg&gt;
+  (Session info: chrome=156.0.8078.79)
+Build info: version: &apos;4.31.0&apos;, revision: &apos;1ef9f18787*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.5&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2ebe543ff6f485546c1c9a3752fb1b02, clickElement {id=f.C2313A4439395DC1CF90C940E8AF0FD8.d.2064BA6B3A9D3E5E14C81EDC7AA72BF0.e.60}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 156.0.8078.79, chrome: {chromedriverVersion: 156.0.8078.80 (fb096c0011f9..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56501}, goog:processID: 9720, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56501/devtoo..., se:cdpVersion: 156.0.8078.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (2ebe543ff6f485546c1c9a3752fb1b02)] -&gt; css selector: button[aria-controls*=&apos;sidebar&apos;],button[aria-label*=&apos;enu&apos;],button[aria-label*=&apos;idebar&apos;],#sidebarToggle,.sidebar-toggle,.menu-toggle,.hamburger]
+Session ID: 2ebe543ff6f485546c1c9a3752fb1b02
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:171)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC02_SidebarToggle(DashboardScenario.java:62)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+Caused by: org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button id=&quot;mobile-menu-btn&quot; class=&quot;mobile-hamburger-btn&quot; aria-label=&quot;Mở menu&quot; data-old-outline=&quot;&quot; style=&quot;outline: rgb(220, 38, 38) solid 3px;&quot; data-rwd-mark=&quot;Đóng/mở Sidebar&quot;&gt;...&lt;/button&gt; is not clickable at point (28, 30). Other element would receive the click: &lt;svg viewBox=&quot;0 0 24 24&quot; width=&quot;16&quot; height=&quot;16&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;...&lt;/svg&gt;
+  (Session info: chrome=156.0.8078.79)
+Build info: version: &apos;4.31.0&apos;, revision: &apos;1ef9f18787*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.5&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2ebe543ff6f485546c1c9a3752fb1b02, clickElement {id=f.C2313A4439395DC1CF90C940E8AF0FD8.d.2064BA6B3A9D3E5E14C81EDC7AA72BF0.e.60}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 156.0.8078.79, chrome: {chromedriverVersion: 156.0.8078.80 (fb096c0011f9..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56501}, goog:processID: 9720, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56501/devtoo..., se:cdpVersion: 156.0.8078.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (2ebe543ff6f485546c1c9a3752fb1b02)] -&gt; css selector: button[aria-controls*=&apos;sidebar&apos;],button[aria-label*=&apos;enu&apos;],button[aria-label*=&apos;idebar&apos;],#sidebarToggle,.sidebar-toggle,.menu-toggle,.hamburger]
+Session ID: 2ebe543ff6f485546c1c9a3752fb1b02
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at vn.team.autotest.modules.responsive.page.DashboardPage.click(DashboardPage.java:40)
+	at vn.team.autotest.modules.responsive.page.DashboardPage.tapSidebarToggle(DashboardPage.java:105)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.lambda$1(DashboardScenario.java:68)
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:81)
+	... 27 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1186989416", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1186989416'><pre>java.lang.AssertionError: PWW_AUTO_06_RWD_TC02_USER Android 393x873 FAIL: ElementClickInterceptedException: element click intercepted: Element &lt;button id=&quot;mobile-menu-btn&quot; class=&quot;mobile-hamburger-btn&quot; aria-label=&quot;Mở menu&quot; data-old-outline=&quot;&quot; style=&quot;outline: rgb(220, 38, 38) solid 3px;&quot; data-rwd-mark=&quot;Đóng/mở Sidebar&quot;&gt;...&lt;/button&gt; is not clickable at point (28, 30). Other element would receive the click: &lt;svg viewBox=&quot;0 0 24 24&quot; width=&quot;16&quot; height=&quot;16&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;...&lt;/svg&gt;
+  (Session info: chrome=156.0.8078.79)
+Build info: version: &apos;4.31.0&apos;, revision: &apos;1ef9f18787*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.5&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2ebe543ff6f485546c1c9a3752fb1b02, clickElement {id=f.C2313A4439395DC1CF90C940E8AF0FD8.d.2064BA6B3A9D3E5E14C81EDC7AA72BF0.e.60}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 156.0.8078.79, chrome: {chromedriverVersion: 156.0.8078.80 (fb096c0011f9..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56501}, goog:processID: 9720, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56501/devtoo..., se:cdpVersion: 156.0.8078.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (2ebe543ff6f485546c1c9a3752fb1b02)] -&gt; css selector: button[aria-controls*=&apos;sidebar&apos;],button[aria-label*=&apos;enu&apos;],button[aria-label*=&apos;idebar&apos;],#sidebarToggle,.sidebar-toggle,.menu-toggle,.hamburger]
+Session ID: 2ebe543ff6f485546c1c9a3752fb1b02
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:171)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC02_SidebarToggle(DashboardScenario.java:62)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button id=&quot;mobile-menu-btn&quot; class=&quot;mobile-hamburger-btn&quot; aria-label=&quot;Mở menu&quot; data-old-outline=&quot;&quot; style=&quot;outline: rgb(220, 38, 38) solid 3px;&quot; data-rwd-mark=&quot;Đóng/mở Sidebar&quot;&gt;...&lt;/button&gt; is not clickable at point (28, 30). Other element would receive the click: &lt;svg viewBox=&quot;0 0 24 24&quot; width=&quot;16&quot; height=&quot;16&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;...&lt;/svg&gt;
+  (Session info: chrome=156.0.8078.79)
+Build info: version: &apos;4.31.0&apos;, revision: &apos;1ef9f18787*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.5&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2ebe543ff6f485546c1c9a3752fb1b02, clickElement {id=f.C2313A4439395DC1CF90C940E8AF0FD8.d.2064BA6B3A9D3E5E14C81EDC7AA72BF0.e.60}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 156.0.8078.79, chrome: {chromedriverVersion: 156.0.8078.80 (fb096c0011f9..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56501}, goog:processID: 9720, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56501/devtoo..., se:cdpVersion: 156.0.8078.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (2ebe543ff6f485546c1c9a3752fb1b02)] -&gt; css selector: button[aria-controls*=&apos;sidebar&apos;],button[aria-label*=&apos;enu&apos;],button[aria-label*=&apos;idebar&apos;],#sidebarToggle,.sidebar-toggle,.menu-toggle,.hamburger]
+Session ID: 2ebe543ff6f485546c1c9a3752fb1b02
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at vn.team.autotest.modules.responsive.page.DashboardPage.click(DashboardPage.java:40)
+	at vn.team.autotest.modules.responsive.page.DashboardPage.tapSidebarToggle(DashboardPage.java:105)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.lambda$1(DashboardScenario.java:68)
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:81)
+	... 27 more
+</pre></div></td>
+<td>14</td>
+<td>vn.team.autotest.modules.responsive.scenario.DashboardScenario@ed7f8b4</td></tr>
+<tr>
+<td title='vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC03_KpiIndependentExpected()'><b>TC03_KpiIndependentExpected</b><br>Test class: vn.team.autotest.modules.responsive.scenario.DashboardScenario<br>Parameters: USER, iPhone XR 414x896, 414, 896</td>
+<td><div><pre>java.lang.AssertionError: PWW_AUTO_06_RWD_TC03_USER iPhone XR 414x896 FAIL: AssertionError: Không tìm thấy KPI card (hãy đối chiếu selector DOM) expected [false] but found [true]
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:171)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC03_KpiIndependentExpected(DashboardScenario.java:76)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+Caused by: java.lang.AssertionError: Không tìm thấy KPI card (hãy đối chiếu selector DOM) expected [false] but found [true]
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.lambda$2(DashboardScenario.java:79)
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:81)
+	... 27 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2011912080", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2011912080'><pre>java.lang.AssertionError: PWW_AUTO_06_RWD_TC03_USER iPhone XR 414x896 FAIL: AssertionError: Không tìm thấy KPI card (hãy đối chiếu selector DOM) expected [false] but found [true]
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:171)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC03_KpiIndependentExpected(DashboardScenario.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: java.lang.AssertionError: Không tìm thấy KPI card (hãy đối chiếu selector DOM) expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertFalse(Assert.java:79)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.lambda$2(DashboardScenario.java:79)
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:81)
+	... 27 more
+</pre></div></td>
+<td>7</td>
+<td>vn.team.autotest.modules.responsive.scenario.DashboardScenario@ed7f8b4</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC05_SidebarNavigation()'><b>TC05_SidebarNavigation</b><br>Test class: vn.team.autotest.modules.responsive.scenario.DashboardScenario<br>Parameters: USER, iPhone XR 414x896, 414, 896</td>
+<td></td>
+<td>10</td>
+<td>vn.team.autotest.modules.responsive.scenario.DashboardScenario@ed7f8b4</td></tr>
+<tr>
+<td title='vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC06_AdminPermission()'><b>TC06_AdminPermission</b><br>Test class: vn.team.autotest.modules.responsive.scenario.DashboardScenario<br>Parameters: USER, iPhone XR 414x896, 414, 896</td>
+<td></td>
+<td>9</td>
+<td>vn.team.autotest.modules.responsive.scenario.DashboardScenario@ed7f8b4</td></tr>
+<tr>
+<td title='vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC04_ChartTableOverflow()'><b>TC04_ChartTableOverflow</b><br>Test class: vn.team.autotest.modules.responsive.scenario.DashboardScenario<br>Parameters: USER, Android 393x873, 393, 873</td>
+<td></td>
+<td>6</td>
+<td>vn.team.autotest.modules.responsive.scenario.DashboardScenario@ed7f8b4</td></tr>
+<tr>
+<td title='vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC01_LoginDashboard()'><b>TC01_LoginDashboard</b><br>Test class: vn.team.autotest.modules.responsive.scenario.DashboardScenario<br>Parameters: USER, Android 393x873, 393, 873</td>
+<td></td>
+<td>12</td>
+<td>vn.team.autotest.modules.responsive.scenario.DashboardScenario@ed7f8b4</td></tr>
+<tr>
+<td title='vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC01_LoginDashboard()'><b>TC01_LoginDashboard</b><br>Test class: vn.team.autotest.modules.responsive.scenario.DashboardScenario<br>Parameters: USER, iPhone XR 414x896, 414, 896</td>
+<td></td>
+<td>11</td>
+<td>vn.team.autotest.modules.responsive.scenario.DashboardScenario@ed7f8b4</td></tr>
+<tr>
+<td title='vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC06_AdminPermission()'><b>TC06_AdminPermission</b><br>Test class: vn.team.autotest.modules.responsive.scenario.DashboardScenario<br>Parameters: USER, Android 393x873, 393, 873</td>
+<td></td>
+<td>9</td>
+<td>vn.team.autotest.modules.responsive.scenario.DashboardScenario@ed7f8b4</td></tr>
+<tr>
+<td title='vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC04_ChartTableOverflow()'><b>TC04_ChartTableOverflow</b><br>Test class: vn.team.autotest.modules.responsive.scenario.DashboardScenario<br>Parameters: USER, iPhone XR 414x896, 414, 896</td>
+<td></td>
+<td>6</td>
+<td>vn.team.autotest.modules.responsive.scenario.DashboardScenario@ed7f8b4</td></tr>
+<tr>
+<td title='vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC05_SidebarNavigation()'><b>TC05_SidebarNavigation</b><br>Test class: vn.team.autotest.modules.responsive.scenario.DashboardScenario<br>Parameters: USER, Android 393x873, 393, 873</td>
+<td></td>
+<td>10</td>
+<td>vn.team.autotest.modules.responsive.scenario.DashboardScenario@ed7f8b4</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC04_ChartTableOverflow()'><b>TC04_ChartTableOverflow</b><br>Test class: vn.team.autotest.modules.responsive.scenario.DashboardScenario<br>Parameters: SUPERADMIN, Android 393x873, 393, 873</td>
+<td><div><pre>org.testng.SkipException: Thiếu tài khoản SUPERADMIN: cấu hình -Dtest.username/-Dtest.password hoặc -Dtest.admin.username/-Dtest.admin.password
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.loggedIn(DashboardScenario.java:35)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.lambda$3(DashboardScenario.java:102)
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:81)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC04_ChartTableOverflow(DashboardScenario.java:101)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace822799883", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace822799883'><pre>org.testng.SkipException: Thiếu tài khoản SUPERADMIN: cấu hình -Dtest.username/-Dtest.password hoặc -Dtest.admin.username/-Dtest.admin.password
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.loggedIn(DashboardScenario.java:35)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.lambda$3(DashboardScenario.java:102)
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:81)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC04_ChartTableOverflow(DashboardScenario.java:101)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>3</td>
+<td>vn.team.autotest.modules.responsive.scenario.DashboardScenario@ed7f8b4</td></tr>
+<tr>
+<td title='vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC06_AdminPermission()'><b>TC06_AdminPermission</b><br>Test class: vn.team.autotest.modules.responsive.scenario.DashboardScenario<br>Parameters: SUPERADMIN, iPhone XR 414x896, 414, 896</td>
+<td><div><pre>org.testng.SkipException: Thiếu tài khoản SUPERADMIN: cấu hình -Dtest.username/-Dtest.password hoặc -Dtest.admin.username/-Dtest.admin.password
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.loggedIn(DashboardScenario.java:35)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.lambda$5(DashboardScenario.java:132)
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:81)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC06_AdminPermission(DashboardScenario.java:131)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace350703813", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace350703813'><pre>org.testng.SkipException: Thiếu tài khoản SUPERADMIN: cấu hình -Dtest.username/-Dtest.password hoặc -Dtest.admin.username/-Dtest.admin.password
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.loggedIn(DashboardScenario.java:35)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.lambda$5(DashboardScenario.java:132)
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:81)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC06_AdminPermission(DashboardScenario.java:131)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>2</td>
+<td>vn.team.autotest.modules.responsive.scenario.DashboardScenario@ed7f8b4</td></tr>
+<tr>
+<td title='vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC02_SidebarToggle()'><b>TC02_SidebarToggle</b><br>Test class: vn.team.autotest.modules.responsive.scenario.DashboardScenario<br>Parameters: SUPERADMIN, iPhone XR 414x896, 414, 896</td>
+<td><div><pre>org.testng.SkipException: Thiếu tài khoản SUPERADMIN: cấu hình -Dtest.username/-Dtest.password hoặc -Dtest.admin.username/-Dtest.admin.password
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.loggedIn(DashboardScenario.java:35)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.lambda$1(DashboardScenario.java:63)
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:81)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC02_SidebarToggle(DashboardScenario.java:62)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1491676195", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1491676195'><pre>org.testng.SkipException: Thiếu tài khoản SUPERADMIN: cấu hình -Dtest.username/-Dtest.password hoặc -Dtest.admin.username/-Dtest.admin.password
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.loggedIn(DashboardScenario.java:35)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.lambda$1(DashboardScenario.java:63)
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:81)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC02_SidebarToggle(DashboardScenario.java:62)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>2</td>
+<td>vn.team.autotest.modules.responsive.scenario.DashboardScenario@ed7f8b4</td></tr>
+<tr>
+<td title='vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC03_KpiIndependentExpected()'><b>TC03_KpiIndependentExpected</b><br>Test class: vn.team.autotest.modules.responsive.scenario.DashboardScenario<br>Parameters: SUPERADMIN, iPhone XR 414x896, 414, 896</td>
+<td><div><pre>org.testng.SkipException: Thiếu tài khoản SUPERADMIN: cấu hình -Dtest.username/-Dtest.password hoặc -Dtest.admin.username/-Dtest.admin.password
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.loggedIn(DashboardScenario.java:35)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.lambda$2(DashboardScenario.java:77)
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:81)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC03_KpiIndependentExpected(DashboardScenario.java:76)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1004390006", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1004390006'><pre>org.testng.SkipException: Thiếu tài khoản SUPERADMIN: cấu hình -Dtest.username/-Dtest.password hoặc -Dtest.admin.username/-Dtest.admin.password
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.loggedIn(DashboardScenario.java:35)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.lambda$2(DashboardScenario.java:77)
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:81)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC03_KpiIndependentExpected(DashboardScenario.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>2</td>
+<td>vn.team.autotest.modules.responsive.scenario.DashboardScenario@ed7f8b4</td></tr>
+<tr>
+<td title='vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC05_SidebarNavigation()'><b>TC05_SidebarNavigation</b><br>Test class: vn.team.autotest.modules.responsive.scenario.DashboardScenario<br>Parameters: SUPERADMIN, Android 393x873, 393, 873</td>
+<td><div><pre>org.testng.SkipException: Thiếu tài khoản SUPERADMIN: cấu hình -Dtest.username/-Dtest.password hoặc -Dtest.admin.username/-Dtest.admin.password
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.loggedIn(DashboardScenario.java:35)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.lambda$4(DashboardScenario.java:115)
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:81)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC05_SidebarNavigation(DashboardScenario.java:114)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1096433514", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1096433514'><pre>org.testng.SkipException: Thiếu tài khoản SUPERADMIN: cấu hình -Dtest.username/-Dtest.password hoặc -Dtest.admin.username/-Dtest.admin.password
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.loggedIn(DashboardScenario.java:35)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.lambda$4(DashboardScenario.java:115)
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:81)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC05_SidebarNavigation(DashboardScenario.java:114)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>2</td>
+<td>vn.team.autotest.modules.responsive.scenario.DashboardScenario@ed7f8b4</td></tr>
+<tr>
+<td title='vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC04_ChartTableOverflow()'><b>TC04_ChartTableOverflow</b><br>Test class: vn.team.autotest.modules.responsive.scenario.DashboardScenario<br>Parameters: SUPERADMIN, iPhone XR 414x896, 414, 896</td>
+<td><div><pre>org.testng.SkipException: Thiếu tài khoản SUPERADMIN: cấu hình -Dtest.username/-Dtest.password hoặc -Dtest.admin.username/-Dtest.admin.password
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.loggedIn(DashboardScenario.java:35)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.lambda$3(DashboardScenario.java:102)
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:81)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC04_ChartTableOverflow(DashboardScenario.java:101)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace640275932", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace640275932'><pre>org.testng.SkipException: Thiếu tài khoản SUPERADMIN: cấu hình -Dtest.username/-Dtest.password hoặc -Dtest.admin.username/-Dtest.admin.password
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.loggedIn(DashboardScenario.java:35)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.lambda$3(DashboardScenario.java:102)
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:81)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC04_ChartTableOverflow(DashboardScenario.java:101)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>2</td>
+<td>vn.team.autotest.modules.responsive.scenario.DashboardScenario@ed7f8b4</td></tr>
+<tr>
+<td title='vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC01_LoginDashboard()'><b>TC01_LoginDashboard</b><br>Test class: vn.team.autotest.modules.responsive.scenario.DashboardScenario<br>Parameters: SUPERADMIN, iPhone XR 414x896, 414, 896</td>
+<td><div><pre>org.testng.SkipException: Thiếu tài khoản SUPERADMIN: cấu hình -Dtest.username/-Dtest.password hoặc -Dtest.admin.username/-Dtest.admin.password
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.loggedIn(DashboardScenario.java:35)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.lambda$0(DashboardScenario.java:47)
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:81)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC01_LoginDashboard(DashboardScenario.java:46)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace454440929", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace454440929'><pre>org.testng.SkipException: Thiếu tài khoản SUPERADMIN: cấu hình -Dtest.username/-Dtest.password hoặc -Dtest.admin.username/-Dtest.admin.password
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.loggedIn(DashboardScenario.java:35)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.lambda$0(DashboardScenario.java:47)
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:81)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC01_LoginDashboard(DashboardScenario.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>3</td>
+<td>vn.team.autotest.modules.responsive.scenario.DashboardScenario@ed7f8b4</td></tr>
+<tr>
+<td title='vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC06_AdminPermission()'><b>TC06_AdminPermission</b><br>Test class: vn.team.autotest.modules.responsive.scenario.DashboardScenario<br>Parameters: SUPERADMIN, Android 393x873, 393, 873</td>
+<td><div><pre>org.testng.SkipException: Thiếu tài khoản SUPERADMIN: cấu hình -Dtest.username/-Dtest.password hoặc -Dtest.admin.username/-Dtest.admin.password
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.loggedIn(DashboardScenario.java:35)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.lambda$5(DashboardScenario.java:132)
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:81)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC06_AdminPermission(DashboardScenario.java:131)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace995760621", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace995760621'><pre>org.testng.SkipException: Thiếu tài khoản SUPERADMIN: cấu hình -Dtest.username/-Dtest.password hoặc -Dtest.admin.username/-Dtest.admin.password
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.loggedIn(DashboardScenario.java:35)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.lambda$5(DashboardScenario.java:132)
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:81)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC06_AdminPermission(DashboardScenario.java:131)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>3</td>
+<td>vn.team.autotest.modules.responsive.scenario.DashboardScenario@ed7f8b4</td></tr>
+<tr>
+<td title='vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC02_SidebarToggle()'><b>TC02_SidebarToggle</b><br>Test class: vn.team.autotest.modules.responsive.scenario.DashboardScenario<br>Parameters: SUPERADMIN, Android 393x873, 393, 873</td>
+<td><div><pre>org.testng.SkipException: Thiếu tài khoản SUPERADMIN: cấu hình -Dtest.username/-Dtest.password hoặc -Dtest.admin.username/-Dtest.admin.password
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.loggedIn(DashboardScenario.java:35)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.lambda$1(DashboardScenario.java:63)
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:81)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC02_SidebarToggle(DashboardScenario.java:62)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace627746290", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace627746290'><pre>org.testng.SkipException: Thiếu tài khoản SUPERADMIN: cấu hình -Dtest.username/-Dtest.password hoặc -Dtest.admin.username/-Dtest.admin.password
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.loggedIn(DashboardScenario.java:35)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.lambda$1(DashboardScenario.java:63)
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:81)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC02_SidebarToggle(DashboardScenario.java:62)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>3</td>
+<td>vn.team.autotest.modules.responsive.scenario.DashboardScenario@ed7f8b4</td></tr>
+<tr>
+<td title='vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC03_KpiIndependentExpected()'><b>TC03_KpiIndependentExpected</b><br>Test class: vn.team.autotest.modules.responsive.scenario.DashboardScenario<br>Parameters: SUPERADMIN, Android 393x873, 393, 873</td>
+<td><div><pre>org.testng.SkipException: Thiếu tài khoản SUPERADMIN: cấu hình -Dtest.username/-Dtest.password hoặc -Dtest.admin.username/-Dtest.admin.password
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.loggedIn(DashboardScenario.java:35)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.lambda$2(DashboardScenario.java:77)
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:81)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC03_KpiIndependentExpected(DashboardScenario.java:76)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace197107207", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace197107207'><pre>org.testng.SkipException: Thiếu tài khoản SUPERADMIN: cấu hình -Dtest.username/-Dtest.password hoặc -Dtest.admin.username/-Dtest.admin.password
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.loggedIn(DashboardScenario.java:35)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.lambda$2(DashboardScenario.java:77)
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:81)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC03_KpiIndependentExpected(DashboardScenario.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>2</td>
+<td>vn.team.autotest.modules.responsive.scenario.DashboardScenario@ed7f8b4</td></tr>
+<tr>
+<td title='vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC05_SidebarNavigation()'><b>TC05_SidebarNavigation</b><br>Test class: vn.team.autotest.modules.responsive.scenario.DashboardScenario<br>Parameters: SUPERADMIN, iPhone XR 414x896, 414, 896</td>
+<td><div><pre>org.testng.SkipException: Thiếu tài khoản SUPERADMIN: cấu hình -Dtest.username/-Dtest.password hoặc -Dtest.admin.username/-Dtest.admin.password
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.loggedIn(DashboardScenario.java:35)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.lambda$4(DashboardScenario.java:115)
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:81)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC05_SidebarNavigation(DashboardScenario.java:114)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace816276798", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace816276798'><pre>org.testng.SkipException: Thiếu tài khoản SUPERADMIN: cấu hình -Dtest.username/-Dtest.password hoặc -Dtest.admin.username/-Dtest.admin.password
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.loggedIn(DashboardScenario.java:35)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.lambda$4(DashboardScenario.java:115)
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:81)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC05_SidebarNavigation(DashboardScenario.java:114)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>3</td>
+<td>vn.team.autotest.modules.responsive.scenario.DashboardScenario@ed7f8b4</td></tr>
+<tr>
+<td title='vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC01_LoginDashboard()'><b>TC01_LoginDashboard</b><br>Test class: vn.team.autotest.modules.responsive.scenario.DashboardScenario<br>Parameters: SUPERADMIN, Android 393x873, 393, 873</td>
+<td><div><pre>org.testng.SkipException: Thiếu tài khoản SUPERADMIN: cấu hình -Dtest.username/-Dtest.password hoặc -Dtest.admin.username/-Dtest.admin.password
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.loggedIn(DashboardScenario.java:35)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.lambda$0(DashboardScenario.java:47)
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:81)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC01_LoginDashboard(DashboardScenario.java:46)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2041264753", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2041264753'><pre>org.testng.SkipException: Thiếu tài khoản SUPERADMIN: cấu hình -Dtest.username/-Dtest.password hoặc -Dtest.admin.username/-Dtest.admin.password
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.loggedIn(DashboardScenario.java:35)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.lambda$0(DashboardScenario.java:47)
+	at vn.team.autotest.modules.responsive.base.BaseScenario.check(BaseScenario.java:81)
+	at vn.team.autotest.modules.responsive.scenario.DashboardScenario.TC01_LoginDashboard(DashboardScenario.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>4</td>
+<td>vn.team.autotest.modules.responsive.scenario.DashboardScenario@ed7f8b4</td></tr>
+</table><p>
+</body>
+</html>

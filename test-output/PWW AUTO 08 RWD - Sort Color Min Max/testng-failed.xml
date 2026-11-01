@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite data-provider-thread-count="2" name="Failed suite [PWW AUTO 08 RWD - Sort Color Min Max]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="User login once - Android and iPhone XR(failed)">
+    <classes>
+      <class name="vn.team.autotest.modules.responsive.scenario.LearnScenario8">
+        <methods>
+          <include name="LEARN_08_FLOW" invocation-numbers="0 1"/>
+          <include name="exportExcel"/>
+        </methods>
+      </class> <!-- vn.team.autotest.modules.responsive.scenario.LearnScenario8 -->
+    </classes>
+  </test> <!-- User login once - Android and iPhone XR(failed) -->
+</suite> <!-- Failed suite [PWW AUTO 08 RWD - Sort Color Min Max] -->

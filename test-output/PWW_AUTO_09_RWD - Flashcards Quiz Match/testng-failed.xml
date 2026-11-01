@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite data-provider-thread-count="2" name="Failed suite [PWW_AUTO_09_RWD - Flashcards Quiz Match]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="KB-09-001 to KB-09-019 - Android and iPhone XR(failed)">
+    <classes>
+      <class name="vn.team.autotest.modules.responsive.scenario.LearnScenario9">
+        <methods>
+          <include name="exportExcel"/>
+          <include name="LEARN_09_FLOW" invocation-numbers="0 1"/>
+        </methods>
+      </class> <!-- vn.team.autotest.modules.responsive.scenario.LearnScenario9 -->
+    </classes>
+  </test> <!-- KB-09-001 to KB-09-019 - Android and iPhone XR(failed) -->
+</suite> <!-- Failed suite [PWW_AUTO_09_RWD - Flashcards Quiz Match] -->

@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Autotest PWW</title>
+  <link rel="stylesheet" th:href="@{/css/app.css}" href="/css/app.css">
+</head>
+<body>
+<main class="shell">
+  <aside class="sidebar">
+    <div class="brand"><span>✓</span><div><b>Autotest <em>PWW</em></b></div></div>
+    <div class="project"><span class="environment-dot"></span><div><small>Môi trường kiểm thử</small><b>pww.vn</b></div><em>›</em></div>
+    <p class="nav-label">KHÔNG GIAN LÀM VIỆC</p>
+    <nav>
+      <button class="nav-item active" data-target="overview"><i>⌘</i>Tổng quan</button>
+      <button class="nav-item" data-target="modules"><i>☑</i>Kiểm thử chức năng <span>14</span></button>
+      <button class="nav-item" data-target="suite"><i>▱</i>Test Suite</button>
+      <button class="nav-item" data-target="reports"><i>⌁</i>Báo cáo</button>
+      <button class="nav-item" data-target="source"><i>&lt;/&gt;</i>Cấu trúc source</button>
+    </nav>
+    <div class="stack"><span class="simulation-dot"></span><div><b>Chế độ kiểm thử</b><small>Thực thi trực tiếp trên website</small></div></div>
+    <div class="profile"><span>ML</span><div><b>Mỹ Lệ</b><small>QA Administrator</small></div><em>•••</em></div>
+  </aside>
+
+  <section class="workspace">
+    <header class="topbar"><div class="page-title"><b id="topbar-title">Tổng quan kiểm thử</b><small id="topbar-subtitle">Theo dõi chất lượng toàn bộ website PWW</small></div><div class="topbar-meta"><span><small>Cập nhật lần cuối</small><b>Hôm nay</b></span><button class="icon" aria-label="Làm mới">↻</button><span class="top-avatar">ML</span></div></header>
+
+    <section class="view active" id="overview">
+      <div class="quality-hero">
+        <div class="quality-ring"><strong>100</strong><span>/100 điểm</span></div>
+        <div class="quality-copy"><small>ĐIỂM TỐI ĐA WEBSITE</small><h1>Hệ thống kiểm thử đã sẵn sàng</h1><p>14 trang chức năng với <b th:text="${totalTests}">128</b> nội dung kiểm thử tự động bằng Selenium và TestNG.</p><div><span class="green-dot"></span>14 module <span class="blue-dot"></span><b th:text="${totalTests}">128</b> test case <span class="gray-dot"></span>3 Maven module</div></div>
+        <div class="quality-action"><button class="hero-run run-all">▷&nbsp;&nbsp; Chạy toàn bộ website</button><small th:text="${totalTests + ' nội dung · 100 điểm'}">128 nội dung · 100 điểm</small></div>
+      </div>
+      <div class="section-heading"><div><h2>14 trang chức năng</h2><p>Điểm và phạm vi kiểm thử theo từng trang</p></div><button data-target-jump="modules"><b>14</b>/14 trang đã cấu hình</button></div>
+      <div class="coverage-list card-grid"><button class="coverage-row" th:each="m,stat:${modules}" th:attr="data-module=${m.moduleId}"><div class="card-top"><span th:text="${m.number}">03</span><em>Sẵn sàng</em></div><div class="card-name"><b th:text="${m.name}">Bảng điều khiển</b><small th:text="${m.testCount + ' nội dung kiểm thử'}">8 nội dung kiểm thử</small></div><div class="card-score"><strong th:text="${m.maxPoints}">8</strong><span th:text="${'/ ' + m.maxPoints + ' điểm'}">/ 8 điểm</span><small>100%</small></div><i><u></u></i><div class="card-footer"><span><i></i><b th:text="${m.testCount}">8</b> tests</span><span th:text="${m.role}">User</span><b>→</b></div></button></div>
+    </section>
+
+    <section class="view functional-view" id="modules">
+      <div class="functional-layout">
+        <aside class="function-sidebar">
+          <div class="function-sidebar-head"><div><h2>Trang chức năng</h2><span><b th:text="${#lists.size(modules)}">14</b> trang</span></div><button aria-label="Bộ lọc">≡</button></div>
+          <label class="function-search">⌕<input id="feature-search" placeholder="Tìm trang..."></label>
+          <div class="function-list" id="feature-list">
+            <button class="feature-item" th:each="m:${modules}" th:attr="data-module=${m.moduleId},data-name=${m.name}">
+              <span th:text="${m.number}">03</span>
+              <div><b th:text="${m.name}">Bảng điều khiển</b><small th:text="${m.testCount + ' nội dung · ' + m.maxPoints + 'đ'}">8 nội dung · 8đ</small><i><u></u></i></div>
+              <em></em>
+            </button>
+          </div>
+        </aside>
+
+        <div class="case-area">
+          <header class="case-page-head">
+            <div class="case-breadcrumb"><span>Trang chức năng</span><b>›</b><strong id="case-breadcrumb-name">Bảng điều khiển</strong></div>
+            <div class="case-title-row"><div><h1 id="case-module-name">Bảng điều khiển</h1><p><code id="case-module-route">/dashboard</code><span>·</span><b id="case-module-count">8 nội dung kiểm thử</b></p></div><div class="page-score"><small>Điểm trang</small><strong><span id="case-score">0</span> <em>/ <span id="case-max-score">8</span></em></strong></div></div>
+            <div class="page-progress"><i id="case-progress-bar"></i><span id="case-progress-copy">0% hoàn thành</span></div>
+            <div class="case-actions"><button class="primary run-selected">▷&nbsp; Chạy toàn bộ trang</button><button class="secondary" id="run-checked">▷&nbsp; Chạy mục đã chọn <b id="checked-count">0</b></button><button class="secondary" id="add-suite">＋&nbsp; Thêm vào Test Suite</button></div>
+          </header>
+
+          <div class="case-content">
+            <div class="case-toolbar"><label>⌕<input id="case-search" placeholder="Tìm theo mã hoặc nội dung kiểm thử..."></label><select id="case-group-filter"><option value="">Tất cả nhóm</option><option>Hiển thị</option><option>Luồng xử lý</option><option>Validation</option><option>Phân quyền</option></select><select id="case-status-filter"><option value="">Trạng thái</option><option value="PENDING">Chưa chạy</option><option value="PASS">Pass</option><option value="FAIL">Fail</option></select></div>
+            <article class="case-table-wrap">
+              <table class="case-table"><thead><tr><th><input type="checkbox" id="select-all-cases" aria-label="Chọn tất cả"></th><th>MÃ</th><th>NỘI DUNG KIỂM THỬ</th><th>NHÓM</th><th>ĐIỂM TỐI ĐA</th><th>TRẠNG THÁI</th><th>ĐIỂM ĐẠT</th><th></th></tr></thead><tbody id="test-case-body"></tbody></table>
+              <footer><span id="case-table-summary">Hiển thị 0 nội dung</span><div><button class="active">1</button><button>2</button><button>›</button></div></footer>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="view" id="source">
+      <div class="heading"><div><small>SPRING BOOT · SELENIUM · TESTNG</small><h1>Cấu trúc source code</h1><p>Maven multi-module, Page Object Model và registry dùng chung.</p></div><select id="source-module"><option th:each="m:${modules}" th:value="${m.moduleId}" th:text="${m.number + ' · ' + m.name}">03 · Bảng điều khiển</option></select></div>
+      <div class="source-grid"><article class="panel tree"><header>PROJECT EXPLORER</header><pre>⌄ pww-autotest
+  ⌄ autotest-core
+    ▸ config
+    ▸ driver
+    ▸ base
+    ▸ model
+    ▸ evidence
+  ⌄ autotest-automation
+    ⌄ modules
+      <b id="tree-module">⌄ dashboard</b>
+        ☕ page/<span class="source-class">Dashboard</span>Page.java
+        ☕ scenario/<span class="source-class">Dashboard</span>Scenario.java
+        ◫ data/dashboard.json
+    ◫ suites/full-website.xml
+  ⌄ autotest-app · Spring Boot
+    ▸ controller
+    ▸ service/runner
+    ▸ registry
+    ▸ scoring
+    ▸ report
+    ▸ resources/templates
+    ☕ AutoTestApplication.java
+  Ⓜ pom.xml</pre></article><article class="editor"><header><b id="editor-file">DashboardScenario.java</b><span>DashboardPage.java</span><span>dashboard.xml</span></header><div>autotest-automation / src / main / java / modules / <b id="editor-module">dashboard</b></div><pre id="code-preview"></pre></article></div>
+      <div class="contracts"><article><small>01</small><b>Page Object</b><p>Locator private; công khai hành vi nghiệp vụ.</p></article><article><small>02</small><b>Scenario độc lập</b><p>Tự chuẩn bị dữ liệu, assertion và cleanup.</p></article><article><small>03</small><b>Result contract</b><p>runId, testId, status, duration, error, evidence.</p></article><article><small>04</small><b>Central scoring</b><p>Điểm trong registry; chạy lại không cộng trùng.</p></article></div>
+    </section>
+
+    <section class="view" id="suite">
+      <div class="heading"><div><small>SPRING BOOT TEST RUNNER</small><h1>Test Suite Runner</h1><p>Spring service gọi TestNG; mỗi test giữ WebDriver riêng.</p></div><div><button class="secondary run-selected">Chạy module đã chọn</button><button class="primary run-all">▶ Run Full Suite</button></div></div>
+      <div class="run-config"><div><small>WEBSITE TARGET</small><b>PLT WordWise</b><span>http://localhost:8000</span></div><div><small>BROWSER</small><b>Chrome</b><span>Headless · 1440 × 900</span></div><div><small>EXECUTION</small><b>Sequential</b><span>14 suites · retry 0</span></div><div><small>EVIDENCE</small><b>On failure</b><span>Screenshot + log</span></div></div>
+      <div class="suite-grid"><article class="panel suite-list"><header><div><small>EXECUTION PLAN</small><h2>full-website.xml</h2></div><i id="run-state">SẴN SÀNG</i></header><div class="suite-row" th:each="m,stat:${modules}" th:attr="data-suite-module=${m.moduleId}"><span th:text="${#numbers.formatInteger(stat.index+1,2)}">01</span><div><b th:text="${m.name}">Trang chủ</b><small th:text="${m.suiteFile}">home.xml</small></div><em th:text="${m.testCount + ' tests'}">6 tests</em><i>CHỜ CHẠY</i></div></article><aside class="console"><header>LIVE CONSOLE <button id="clear-console">Clear</button></header><pre id="console-output">$ Spring Boot → TestNG → Selenium
+
+# Chọn Run để bắt đầu phiên kiểm thử.
+# Kết quả được cập nhật qua /api/runs/{runId}.</pre><div><small>MODULE ĐÃ CHỌN</small><b id="console-module">Bảng điều khiển</b></div></aside></div>
+    </section>
+
+    <section class="view" id="reports">
+      <div class="heading"><div><small>RUN HISTORY</small><h1>Báo cáo kiểm thử</h1><p>Kết quả theo test ID, module, điểm và minh chứng.</p></div><button class="secondary">Xuất báo cáo HTML</button></div><article class="report-hero"><div><small>RUN GẦN NHẤT</small><h2 id="report-score">Chưa có kết quả</h2><p id="report-copy">Chạy Test Suite để tạo báo cáo đầu tiên.</p></div><div id="score-ring">—</div></article><article class="panel report-table"><header><div><small>TEST RESULTS</small><h2>Kết quả chi tiết</h2></div></header><table><thead><tr><th>TEST ID</th><th>MODULE</th><th>TRẠNG THÁI</th><th>THỜI GIAN</th><th>LỖI / MINH CHỨNG</th></tr></thead><tbody id="report-body"><tr><td colspan="5">Chưa có dữ liệu.</td></tr></tbody></table></article>
+    </section>
+  </section>
+</main>
+
+<div class="case-overlay" id="case-overlay" aria-hidden="true">
+  <button class="overlay-backdrop" id="case-backdrop" aria-label="Đóng chi tiết"></button>
+  <aside class="case-drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+    <header><div><b id="drawer-id">DSH-001</b><h2 id="drawer-title">Hiển thị đầy đủ thông tin</h2></div><button id="close-case" aria-label="Đóng">×</button></header>
+    <div class="drawer-status"><span id="drawer-status">● Chưa chạy</span><em id="drawer-group">Hiển thị</em><b><span id="drawer-score">0</span> / <span id="drawer-max">1</span> điểm</b></div>
+    <div class="drawer-body">
+      <section><h3>Điều kiện tiên quyết</h3><p id="drawer-precondition"></p></section>
+      <section><h3>Dữ liệu kiểm thử</h3><div class="test-data-box"><span>Website</span><b id="drawer-route">/dashboard</b><span>Vai trò</span><b id="drawer-role">User</b></div></section>
+      <section><h3>Các bước thực hiện</h3><ol id="drawer-steps"></ol></section>
+      <section class="result-box expected"><h3>Expected Result</h3><p id="drawer-expected"></p></section>
+      <section class="result-box actual"><h3>Actual Result</h3><p id="drawer-actual">Chưa có kết quả. Hãy chạy nội dung kiểm thử này.</p></section>
+      <section><div class="evidence-title"><h3>Ảnh minh chứng</h3><button>Xem log chi tiết</button></div><div class="evidence-placeholder"><i>▷</i><b>Chưa có ảnh minh chứng</b><span>Ảnh sẽ được lưu tự động khi kiểm thử lỗi</span></div></section>
+    </div>
+    <footer><span>Lần chạy gần nhất: <b id="drawer-last-run">Chưa chạy</b></span><button class="primary" id="run-case">▷&nbsp; Chạy nội dung</button></footer>
+  </aside>
+</div>
+<script th:inline="javascript">window.PWW_MODULES = /*[[${modules}]]*/ [];</script>
+<script th:src="@{/js/app.js}" src="/js/app.js"></script>
+</body>
+</html>
